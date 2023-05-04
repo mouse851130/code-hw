@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>year</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        let year = window.prompt('請輸入年份:')
+        if (year % 400 == 0) {
+            window.alert(`${year}是:閏年`);
+        }
+        else if (year % 4 == 0 && year % 100 != 0) {
+            window.alert(`${year}是:閏年`);
+        }
+        else if (year % 4 != 0) {
+            window.alert(`${year}是:平年`);
+        }
+        else if (year % 100 == 0 && year % 400 != 0) {
+            window.alert(`${year}是:平年`);
+        }
+    </script>
+</body>
+
+</html>

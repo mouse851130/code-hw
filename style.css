@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#convert-btn {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+#output-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#fahrenheit-output {
+    font-size: 24px;
+    font-weight: bold;
+}

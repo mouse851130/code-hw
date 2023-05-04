@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寫生日算幾歲</title>
+</head>
+
+<body>
+    <input type="text" name="" id="text1" placeholder="請輸入西元年生日" onclick="cal()">
+    <input type="button" value="計算" id="switch">
+    <input type="text" id="outcome">
+
+    <script>
+        let birth = document.getElementById('text1');
+        let convert = document.getElementById("switch");
+        let result = document.getElementById("outcome");
+
+        console.log(birth);
+        convert.addEventListener("click", trans)
+
+        //dyear - birthvalue
+        let d = new Date();
+        let dyear = d.getFullYear();
+        let birthvalue = birth.value;
+        console.log(d);
+        console.log(dyear);
+        console.log(typeof dyear);
+        console.log(d);
+        console.log(birth.value);
+
+
+        function cal(birthvalue) {
+            let outcome = dyear - birthvalue;
+            return outcome;
+        }
+
+        function trans() {
+            var b = birth.value;
+            result.value = cal(b);
+        }
+
+
+    </script>
+</body>
+
+</html>

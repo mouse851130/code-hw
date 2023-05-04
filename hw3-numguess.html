@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numguess</title>
+</head>
+
+<body>
+    <script>
+        let num = Math.random()
+        console.log(num); //0-1之間的值
+        console.log(num * 100); //0-1之間的值
+        //Math.floor() 無條件捨去
+        let guessNum = parseInt(Math.floor(num * 100)); //取整數
+        console.log(guessNum)
+
+        while (true) {
+            let guess = window.prompt('輸入數字:')
+            if (guess == guessNum) {
+                window.alert('答對');
+                break;
+            }
+            else if (guess < guessNum) {
+                window.alert('數字較小');
+                continue;
+            }
+            else {
+                window.alert('數字較大');
+                continue;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

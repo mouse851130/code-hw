@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text"> -->
+    <script>
+        const hei = window.prompt('身高(公尺)):', 18);
+        const wei = window.prompt('體重:(公斤)', 60);
+        let BMI = wei / (hei ^ 2);
+        let sit = '';
+
+        if (BMI < 18.5) {
+            sit = '過輕';
+        }
+        else if (BMI >= 18.5 && BMI < 24) {
+            sit = '正常';
+        }
+        else if (BMI >= 24 && BMI < 27) {
+            sit = '過重';
+        }
+        else if (BMI >= 27 && BMI < 30) {
+            sit = '輕度肥胖';
+        }
+        else if (BMI >= 30 && BMI < 35) {
+            sit = '中度肥胖';
+        }
+        else {
+            sit = '重度肥胖';
+        }
+        window.alert(`你的BMI是:${BMI},屬於:${sit}`)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regexp_pwd</title>
+</head>
+
+<body>
+    <div>規則:@前面要有字元，@後面要是字元+.</div>
+    <label>email:</label>
+    <input type="text" name="" id="email" placeholder="請填入信箱">
+    <input type="button" value="檢查" id="button1">
+    <input type="text" name="" id="result1" placeholder="是否正確">
+
+    <script>
+        //檢查有沒有@以及@不能重複
+        let mail = document.getElementById("email");
+        let check = document.getElementById("button1");
+        let result1 = document.getElementById
+
+        let regexp = /^\w+@\w+\.{1}.{1,}$/;
+        // let regexp = /^.+@.+\..{2,3}$/;
+        check.addEventListener("click", () => {
+            let email = mail.value;
+            if (regexp.test(email)) {
+                window.alert("信箱格式正確");
+            }
+            else {
+                window.alert("信箱格式錯誤")
+            }
+        })
+
+    </script>
+</body>
+
+</html>

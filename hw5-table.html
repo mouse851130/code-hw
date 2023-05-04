@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../css/hw1-table.css">
+    <style>
+        .set1 {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        document.write('<table style = "border:1px solid black">')
+        for (let i = 1; i <= 9; i++) {
+            document.write('<tr style = "border:1px solid black">');
+            for (let j = 1; j <= 9; j++) {
+                document.write(`<td>${i}*${j}=${i * j}</td>`);
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>')
+    </script>
+</body>
+
+</html>

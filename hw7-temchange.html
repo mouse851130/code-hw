@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temperature change</title>
+</head>
+
+<body>
+    <!-- 華氏F = (攝氏C * 9 / 5) + 32 -->
+    <!-- 攝氏C = (華氏F - 32) *5 / 9 -->
+    <input type="text" id="c_to_f" placeholder="攝氏轉華氏" placeholder="攝氏轉華氏">
+    <input type="button" value="轉換" id="c-f">
+    <input type="text" name="" id="outcome1" value="" placeholder="結果">
+    <br>
+    <input type="text" name="" id="f_to_c" placeholder="華氏轉攝氏">
+    <input type="button" value="轉換" id="f-c">
+    <input type="text" name="" id="outcome2" placeholder="結果">
+    <script>
+        //=========切換按鈕作法=====================
+
+        let c1 = document.getElementById("c_to_f");
+        let switch1 = document.getElementById("c-f");
+        let outcomeone = document.getElementById("outcome1");
+
+        switch1.addEventListener("click", transCtoF);
+        function trans(c) {
+            result = (c * 9 / 5) + 32;
+            return result;
+        }
+
+        function transCtoF() {
+            let myC = c1.value;
+            outcomeone.value = trans(myC);
+        }
+
+    </script>
+    <script>
+        //先從上面抓下來
+        let f1 = document.getElementById("f_to_c");
+        let convert = document.getElementById("f-c");
+        let outcometwo = document.getElementById("outcome2");
+
+        //再各自抓值
+        convert.addEventListener("click", transFtoC);
+
+        //製作公式
+        //先做華氏溫度轉攝氏溫度的公式(不會用到上面的值，僅為單純的公式)
+        function FtoC(f) {
+            result = (f - 32) * 5 / 9;
+            return result;
+        }
+
+        //再製作上面溫度轉化結果塞到outcome的函式
+        function transFtoC() {
+            var myF = f1.value;
+            outcometwo.value = FtoC(myF);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
