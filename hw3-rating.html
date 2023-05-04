@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .s {
-            filter: grayscale(1);
-            /*沒有任何色彩的黑白影像*/
-        }
+      .s {
+        filter: grayscale(1);
+        /*沒有任何色彩的黑白影像*/
+      }
 
-        .n {
-            filter: grayscale(0);
-            /*顏色不變*/
-        }
+      .n {
+        filter: grayscale(0);
+        /*顏色不變1*/
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <img id="idstar1" class="s" src="chngstar.gif" />
-        <img id="idstar2" class="s" src="chngstar.gif" />
-        <img id="idstar3" class="s" src="chngstar.gif" />
-        <img id="idstar4" class="s" src="chngstar.gif" />
-        <img id="idstar5" class="s" src="chngstar.gif" />
-        <br>
-        <p id="p1">你對這項商品的評價為：</p>
+      <img id="idstar1" class="s" src="chngstar.gif" />
+      <img id="idstar2" class="s" src="chngstar.gif" />
+      <img id="idstar3" class="s" src="chngstar.gif" />
+      <img id="idstar4" class="s" src="chngstar.gif" />
+      <img id="idstar5" class="s" src="chngstar.gif" />
+      <br />
+      <p id="p1">你對這項商品的評價為：</p>
     </div>
     <script>
-        console.log(document.images[0])
-        //第一顆星
-        document.getElementById("idstar1").addEventListener("mouseover", () => {
-            document.getElementById("idstar1").className = "n";
-        })
+      console.log(document.images[0]);
+      //第一顆星
+      document.getElementById("idstar1").addEventListener("mouseover", () => {
+        document.getElementById("idstar1").className = "n";
+      });
 
-        document.getElementById("idstar1").addEventListener("mouseout", () => {
-            document.getElementById("idstar1").className = "s";
-        })
+      document.getElementById("idstar1").addEventListener("mouseout", () => {
+        document.getElementById("idstar1").className = "s";
+      });
 
-        document.getElementById("idstar1").addEventListener("click", () => {
-            document.getElementById("p1").innerHTML = "你對這項商品的評價為：一顆星"
-            document.getElementById("idstar1").className = "n";
-        })
-        //第二顆星
-        document.getElementById("idstar2").addEventListener("mouseover", () => {
-            document.getElementById("idstar1").className = "n";
-            document.getElementById("idstar2").className = "n";
-        })
+      document.getElementById("idstar1").addEventListener("click", () => {
+        document.getElementById("p1").innerHTML =
+          "你對這項商品的評價為：一顆星";
+        document.getElementById("idstar1").className = "n";
+      });
+      //第二顆星
+      document.getElementById("idstar2").addEventListener("mouseover", () => {
+        document.getElementById("idstar1").className = "n";
+        document.getElementById("idstar2").className = "n";
+      });
 
-        document.getElementById("idstar2").addEventListener("mouseout", () => {
-            document.getElementById("idstar1").className = "s";
-            document.getElementById("idstar2").className = "s";
-        })
+      document.getElementById("idstar2").addEventListener("mouseout", () => {
+        document.getElementById("idstar1").className = "s";
+        document.getElementById("idstar2").className = "s";
+      });
 
-        document.getElementById("idstar2").addEventListener("click", () => {
-            document.getElementById("p1").innerHTML = "你對這項商品的評價為：兩顆星"
-        })
+      document.getElementById("idstar2").addEventListener("click", () => {
+        document.getElementById("p1").innerHTML =
+          "你對這項商品的評價為：兩顆星";
+      });
 
-        //第三顆星
-        document.getElementById("idstar3").addEventListener("mouseover", () => {
-            document.getElementById("idstar1").className = "n";
-            document.getElementById("idstar2").className = "n";
-            document.getElementById("idstar3").className = "n";
-        })
+      //第三顆星
+      document.getElementById("idstar3").addEventListener("mouseover", () => {
+        document.getElementById("idstar1").className = "n";
+        document.getElementById("idstar2").className = "n";
+        document.getElementById("idstar3").className = "n";
+      });
 
-        document.getElementById("idstar3").addEventListener("mouseout", () => {
-            document.getElementById("idstar1").className = "s";
-            document.getElementById("idstar2").className = "s";
-            document.getElementById("idstar3").className = "s";
+      document.getElementById("idstar3").addEventListener("mouseout", () => {
+        document.getElementById("idstar1").className = "s";
+        document.getElementById("idstar2").className = "s";
+        document.getElementById("idstar3").className = "s";
+      });
 
-        })
+      document.getElementById("idstar3").addEventListener("click", () => {
+        document.getElementById("p1").innerHTML =
+          "你對這項商品的評價為：三顆星";
+      });
 
-        document.getElementById("idstar3").addEventListener("click", () => {
-            document.getElementById("p1").innerHTML = "你對這項商品的評價為：三顆星"
-        })
+      //第四顆星
+      document.getElementById("idstar4").addEventListener("mouseover", () => {
+        document.getElementById("idstar1").className = "n";
+        document.getElementById("idstar2").className = "n";
+        document.getElementById("idstar3").className = "n";
+        document.getElementById("idstar4").className = "n";
+      });
 
-        //第四顆星
-        document.getElementById("idstar4").addEventListener("mouseover", () => {
-            document.getElementById("idstar1").className = "n";
-            document.getElementById("idstar2").className = "n";
-            document.getElementById("idstar3").className = "n";
-            document.getElementById("idstar4").className = "n";
-        })
+      document.getElementById("idstar4").addEventListener("mouseout", () => {
+        document.getElementById("idstar1").className = "s";
+        document.getElementById("idstar2").className = "s";
+        document.getElementById("idstar3").className = "s";
+        document.getElementById("idstar4").className = "s";
+      });
 
-        document.getElementById("idstar4").addEventListener("mouseout", () => {
-            document.getElementById("idstar1").className = "s";
-            document.getElementById("idstar2").className = "s";
-            document.getElementById("idstar3").className = "s";
-            document.getElementById("idstar4").className = "s";
-        })
+      document.getElementById("idstar4").addEventListener("click", () => {
+        document.getElementById("p1").innerHTML =
+          "你對這項商品的評價為：四顆星";
+      });
 
-        document.getElementById("idstar4").addEventListener("click", () => {
-            document.getElementById("p1").innerHTML = "你對這項商品的評價為：四顆星"
-        })
+      //第五顆星
+      document.getElementById("idstar5").addEventListener("mouseover", () => {
+        document.getElementById("idstar1").className = "n";
+        document.getElementById("idstar2").className = "n";
+        document.getElementById("idstar3").className = "n";
+        document.getElementById("idstar4").className = "n";
+        document.getElementById("idstar5").className = "n";
+      });
 
-        //第五顆星
-        document.getElementById("idstar5").addEventListener("mouseover", () => {
-            document.getElementById("idstar1").className = "n";
-            document.getElementById("idstar2").className = "n";
-            document.getElementById("idstar3").className = "n";
-            document.getElementById("idstar4").className = "n";
-            document.getElementById("idstar5").className = "n";
+      document.getElementById("idstar5").addEventListener("mouseout", () => {
+        document.getElementById("idstar1").className = "s";
+        document.getElementById("idstar2").className = "s";
+        document.getElementById("idstar3").className = "s";
+        document.getElementById("idstar4").className = "s";
+        document.getElementById("idstar5").className = "s";
+      });
 
-        })
-
-        document.getElementById("idstar5").addEventListener("mouseout", () => {
-            document.getElementById("idstar1").className = "s";
-            document.getElementById("idstar2").className = "s";
-            document.getElementById("idstar3").className = "s";
-            document.getElementById("idstar4").className = "s";
-            document.getElementById("idstar5").className = "s";
-
-        })
-
-        document.getElementById("idstar5").addEventListener("click", () => {
-            document.getElementById("p1").innerHTML = "你對這項商品的評價為：五顆星"
-        })
+      document.getElementById("idstar5").addEventListener("click", () => {
+        document.getElementById("p1").innerHTML =
+          "你對這項商品的評價為：五顆星";
+      });
     </script>
-</body>
-
+  </body>
 </html>
